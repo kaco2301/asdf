@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoatMove : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 10f;                     // 이동 속도
-    [SerializeField] float boatRotSpeed = 40f;                  // 회전 속도
+    [SerializeField] float rotationSpeed = 40f;                  // 회전 속도
 
     [SerializeField] float shakeSpeed = 2f;                   // 흔들리는 속도
     [SerializeField] float shakeAmount = 0.1f;                  // 흔들리는 정도
@@ -17,22 +17,20 @@ public class BoatMove : MonoBehaviour
     private Vector3 initialPosition;                            // 초기 회전값을 저장하는 변수
     private Quaternion initialRotation;                         // 초기 회전값
 
-    private Rigidbody rigidBody;
+    private Rigidbody rb;
     private bool isMovementEnabled = true;
 
     bool isSpeedBoosted = false; // 이동속도 증가 효과 여부
     float boostDuration = 1f; // 이동속도 증가 지속 시간
     float boostAmount = 10f; // 이동속도 증가량
+    float shake;
     Coroutine boostCoroutine = null; // 현재 이동속도 증가 코루틴 참조
 
 
 
     private void Start()
     {
-        initialPosition = transform.position;
-        initialRotation = transform.rotation;
-
-        rigidBody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
     private void Update()
     {
@@ -42,31 +40,36 @@ public class BoatMove : MonoBehaviour
         }
 
         // 보트의 흔들림 효과 적용
-        wave();
+        //wave();
     }
 
     private void BoatMovement()
     {
+
         float Horz = Input.GetAxis("Horizontal");
         float Vert = Input.GetAxis("Vertical");
+            //이동
+            float amount = moveSpeed * Time.deltaTime * Vert; // 현재 프레임에서 이동할 거리
+            rb.MovePosition(rb.position + transform.forward * amount);
 
-        //이동
-        float amount = moveSpeed * Time.deltaTime * Vert; // 현재 프레임에서 이동할 거리
-        rigidBody.MovePosition(rigidBody.position + transform.forward * amount);
+            //회전
+            float amountRot = rotationSpeed * Time.deltaTime * Horz; // 현재 프레임에서 회전할 각도
+            rb.MoveRotation(rb.rotation * Quaternion.Euler(Vector3.up * amountRot));
 
-        //회전
-        float amountRot = boatRotSpeed * Time.deltaTime * Horz; // 현재 프레임에서 회전할 각도
-        rigidBody.MoveRotation(rigidBody.rotation * Quaternion.Euler(Vector3.up * amountRot));
+        //shake = Mathf.Sin(Time.time * shakeSpeed) * shakeAmount;
+        //rb.velocity = new Vector3(0, shake, 0);
+        float shakeForce = Mathf.Sin(Time.time * shakeSpeed) * shakeAmount;
+        rb.AddForce(new Vector3(0f, shakeForce, 0f));
     }
 
     private void wave()
     {
         // sin 함수를 사용하여 보트를 흔들도록 함
-        float shake = Mathf.Sin(Time.time * shakeSpeed) * shakeAmount;
+        float shakes = Mathf.Sin(Time.time * shakeSpeed) * shakeAmount;
 
         // 보트 오브젝트의 로컬 회전값을 변경하여 흔들리는 효과를 줌
         Vector3 position = initialPosition;
-        position.y += shake;
+        position.y += shakes;
         transform.position = position;
     }
 
