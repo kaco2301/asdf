@@ -8,6 +8,8 @@ TagManager:
   - Item
   - FinishLine
   - SpeedItem
+  - ScoreItem
+  - TrapItem
   layers:
   - Default
   - TransparentFX
