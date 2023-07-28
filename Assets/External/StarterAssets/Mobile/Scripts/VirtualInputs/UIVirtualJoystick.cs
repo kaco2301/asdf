@@ -11,6 +11,7 @@ public class UIVirtualJoystick : MonoBehaviour, IPointerDownHandler, IDragHandle
     public RectTransform containerRect;
     public RectTransform handleRect;
 
+
     [Header("Settings")]
     public float joystickRange = 50f;
     public float magnitudeMultiplier = 1f;
@@ -20,6 +21,7 @@ public class UIVirtualJoystick : MonoBehaviour, IPointerDownHandler, IDragHandle
     [Header("Output")]
     public Event joystickOutputEvent;
 
+    public Vector2 outputValue;
     void Start()
     {
         SetupHandle();
@@ -70,6 +72,7 @@ public class UIVirtualJoystick : MonoBehaviour, IPointerDownHandler, IDragHandle
 
     private void OutputPointerEventValue(Vector2 pointerPosition)
     {
+        outputValue = pointerPosition;
         joystickOutputEvent.Invoke(pointerPosition);
     }
 

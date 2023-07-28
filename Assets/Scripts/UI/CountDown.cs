@@ -8,18 +8,21 @@ public class CountDown : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI countDownText;
     [SerializeField] TextMeshProUGUI text_Time;
-    BoatMove boatMove;
+    
     public int limitTime = 60; // 제한 시간
-    int sec; // 초 변수
-    int min; // 분 변수
 
     GameManager gameManager;
+    BoatMove boatMove;
 
     private void Start()
     {
         boatMove = GameObject.Find("Boat").GetComponent<BoatMove>();
         gameManager = GetComponent<GameManager>();
 
+        
+    }
+    public void StartCounting()
+    {
         StartCoroutine(StartCownDown());
     }
 

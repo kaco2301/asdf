@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C7E79F45-C68D-4429-E286-D0F974B76386}</ProjectGuid>
+    <ProjectGuid>{DD8878A2-B487-F8AB-7A23-B101B3637F39}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,70 +57,82 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Samples\Universal RP\12.1.12\URP Package Samples\CameraStacking\3D Skybox\Scripts\SkyboxCamera.cs" />
-    <Compile Include="Assets\External\FloatingEntities\Scripts\PropellerBoats.cs" />
+    <Compile Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\External\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\External\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
-    <Compile Include="Assets\External\FloatingEntities\Scripts\WakeGenerator.cs" />
     <Compile Include="Assets\Scripts\Item\ScoreItem.cs" />
     <Compile Include="Assets\Samples\Universal RP\12.1.12\URP Package Samples\SharedAssets\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\External\GUI PRO Kit - Fantasy RPG\Scripts\PanelFantasyRPG.cs" />
     <Compile Include="Assets\Samples\Universal RP\12.1.12\URP Package Samples\SharedAssets\Scripts\AutoLoadPipelineAsset.cs" />
+    <Compile Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\External\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\Item\SpeedItem.cs" />
-    <Compile Include="Assets\External\FloatingEntities\Scripts\Tools\Proxies.cs" />
     <Compile Include="Assets\External\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
-    <Compile Include="Assets\External\FloatingEntities\Scripts\Orbital.cs" />
-    <Compile Include="Assets\External\FloatingEntities\Scripts\GameEntity\GameEntity.cs" />
+    <Compile Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\External\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
-    <Compile Include="Assets\External\FloatingEntities\Scripts\OceanAdvanced.cs" />
+    <Compile Include="Assets\Scripts\Item\ItemMouseOver.cs" />
     <Compile Include="Assets\Scripts\Boat\BoatMove.cs" />
     <Compile Include="Assets\Samples\Universal RP\12.1.12\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
     <Compile Include="Assets\External\GUI PRO Kit - Fantasy RPG\Extensions\UIParticle\UIParticleSystem.cs" />
-    <Compile Include="Assets\External\FloatingEntities\Scripts\SplashGenerator.cs" />
-    <Compile Include="Assets\External\FloatingEntities\Scripts\GameEntity\FloatingGameEntityRealist.cs" />
+    <Compile Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\External\GUI PRO Kit - Fantasy RPG\Scripts\PanelControlFantasyRPG.cs" />
+    <Compile Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
     <Compile Include="Assets\External\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\External\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
     <Compile Include="Assets\Samples\Universal RP\12.1.12\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
     <Compile Include="Assets\Scripts\UI\CountDown.cs" />
     <Compile Include="Assets\External\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\External\FloatingEntities\Scripts\BoatController.cs" />
+    <Compile Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Scripts\Item\TrapItem.cs" />
-    <Compile Include="Assets\External\FloatingEntities\Scripts\GameEntity\FloatingGameEntityFlat.cs" />
+    <Compile Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\External\Simple Water Shader\Resources\WaterReflection.cs" />
-    <Compile Include="Assets\External\FloatingEntities\Scripts\GameEntity\FloatingGameEntityStorm.cs" />
+    <Compile Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
+    <Compile Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
+    <Compile Include="Assets\Scripts\Boat\BoatFloat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Shaders\CFX3 Multiply Color.shader" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Glow.shader" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Ubershader.shader" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX (legacy)\CartoonFX Free.txt" />
+    <None Include="Assets\External\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\External\FloatingEntities\Shaders\Ocean.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\External\FloatingEntities\Shaders\OceanAdvanced.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\External\GUI PRO Kit - Fantasy RPG\Extensions\UIParticle\hidden particle.shader" />
+    <None Include="Assets\External\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Blend.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX Remaster\Readme Cartoon FX Remaster FREE.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\External\StarterAssets\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_PASSES.cginc" />
     <None Include="Assets\Samples\Universal RP\12.1.12\URP Package Samples\SharedAssets\Shaders\3DText.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Procedural Ring.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\External\FloatingEntities\Scripts\ArchimedsLab.dll" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\External\FloatingEntities\Shaders\WaterToolBox.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\External\GUI PRO Kit - Fantasy RPG\Extensions\UIParticle\UIAdditive.shader" />
+    <None Include="Assets\External\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Distortion.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -369,9 +381,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.27f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="ArchimedsLab">
-      <HintPath>Assets\External\FloatingEntities\Scripts\ArchimedsLab.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
@@ -790,12 +799,6 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -808,8 +811,14 @@
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -849,6 +858,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{FBB954AA-EC0B-BF82-4DA8-4CC1CEECE83D}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{DCBD06D9-C0B2-C397-B01F-52308E3ED587}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{505A405D-7D1A-9D12-BE1D-6ADA960B990F}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{0F1D458F-C299-DFAF-C6AC-B4D109D32F05}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{7DAA2738-2711-CB82-396E-66CDA74955DE}</Project>
+      <Name>CFXRDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
+      <Project>{B1DBA1F6-946D-1DA6-1517-554B64BF5D34}</Project>
+      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{D0CCDB74-03E8-4D16-4CE2-1F15961DB5DB}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
+      <Project>{DC8E9946-FA93-48A8-E238-0CFF068BC7A7}</Project>
+      <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{A3EBC663-25F3-8A7E-DC11-ADD4B626D442}</Project>
+      <Name>CFXRRuntime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

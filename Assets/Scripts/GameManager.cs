@@ -13,14 +13,19 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set;}
 
+    public Camera mainCamera;
+    public Camera uiCamera;
+
     public GameObject gameOverPanel;
     public GameObject gameClearPanel;
     public GameObject joyStick;
+    [SerializeField] GameObject welcomeCanvas;
     
 
     public TextMeshProUGUI leftTime;
     public TextMeshProUGUI remainingItemsText;
     public TextMeshProUGUI CollctedItemsText;
+    
 
     private int totalScore = 0;
     private int CollectedItems = 0;
@@ -38,6 +43,12 @@ public class GameManager : MonoBehaviour
 
         gameOverPanel.SetActive(false);
         gameClearPanel.SetActive(false);
+        joyStick.SetActive(false);
+        welcomeCanvas.SetActive(true);
+        Time.timeScale = 1;
+
+        mainCamera.enabled = false;
+        uiCamera.enabled = true;
 
         if (Instance == null)
         {
@@ -48,6 +59,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
     }
     private void PastTime()
     {
@@ -62,9 +74,23 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateRemainingItemsText();
+        
     }
 
+    public void GameStartBtn()
+    {
+        mainCamera.enabled = true;
+        uiCamera.enabled = false;
+
+        Time.timeScale = 1;
+        welcomeCanvas.SetActive(false);
+        joyStick.SetActive(true);
+        countDown.StartCounting();
+        UpdateRemainingItemsText();
+
+        
+
+    }
     public void IncreaseScore(int scoreToAdd)
     {
         totalScore += scoreToAdd;
@@ -111,6 +137,11 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f; // 게임 재개
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void QuitGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("OriginScene");
     }
 
     private void UpdateRemainingItemsText()

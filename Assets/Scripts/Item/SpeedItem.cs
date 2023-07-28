@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpeedItem : MonoBehaviour
 {
-    public float boostDuration = 1f; // 이동 속도를 올려주는 시간(초)
-    public float boostAmount = 1.5f; // 이동 속도를 얼마나 올려줄지 배율
+    public float boostDuration = 1.5f; // 이동 속도를 올려주는 시간(초)
+    public float boostAmount = 2f; // 이동 속도를 얼마나 올려줄지 배율
 
     private void OnTriggerEnter(Collider other)
     {

@@ -4,24 +4,58 @@ using UnityEngine;
 
 public class BoatMove : MonoBehaviour
 {
-    public float moveSpeed = 10f;                     // 이동 속도
+    [Header("Joystick")]
+    [SerializeField] UIVirtualJoystick moveJoystick;
+    [SerializeField] UIVirtualJoystick rotateJoystick;
+
+    [Header("Speed")]
+    [SerializeField] float moveSpeed = 2f;
+    [SerializeField] float rotationSpeed = 2f;
+    [SerializeField] float maxMoveSpeed = 3f;
+    [SerializeField] float maxRotationSpeed = 10f;
+    [SerializeField] float moveLerpSpeed = 5f;
+    [SerializeField] float rotateLerpSpeed = 5f;
+
+
+
     private float currentSpeed;
-    private float currentSpeedMultiplier = 1f; // 현재 이동 속도 비율 (기본값 1: 원래 이동 속도)
+    
+    
 
-    [SerializeField] float rotationSpeed = 40f;                 // 회전 속도
 
+    private Rigidbody rb;
 
-    private Rigidbody rb;                                       //
+    public bool isMovementEnabled = true;
 
-    public bool isMovementEnabled = true;                       // 플레이어 이동 가능 여부
+    private float verticalInput;
+    private float horizontalInput;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>(); 
+        rb = GetComponent<Rigidbody>();
         currentSpeed = moveSpeed;
     }
 
+
+
     private void Update()
+    {
+        if (isMovementEnabled)
+        {
+            Vector2 moveJoystickInput = moveJoystick.outputValue;
+            float targetMoveSpeed = moveJoystickInput.y * maxMoveSpeed;
+            targetMoveSpeed = Mathf.Clamp(targetMoveSpeed, -maxMoveSpeed, maxMoveSpeed);
+            verticalInput = Mathf.Lerp(verticalInput, targetMoveSpeed, moveLerpSpeed * Time.deltaTime);
+
+            Vector2 rotateJoystickInput = rotateJoystick.outputValue;
+            float targetRotateSpeed = rotateJoystickInput.x * maxRotationSpeed;
+            targetRotateSpeed = Mathf.Clamp(targetRotateSpeed, -maxRotationSpeed, maxRotationSpeed);
+            horizontalInput = Mathf.Lerp(horizontalInput, targetRotateSpeed, rotateLerpSpeed * Time.deltaTime);
+        }
+    }
+    
+
+    private void FixedUpdate()
     {
         if (isMovementEnabled)
         {
@@ -32,31 +66,27 @@ public class BoatMove : MonoBehaviour
 
     private void BoatMovement()
     {
-        float Vert = Input.GetAxis("Vertical");
-
         // 이동
-        Move(Vert);
+        Move(verticalInput);
     }
 
     public void Move(float verticalInput)
     {
         // 이동
-        float amount = currentSpeed * Time.deltaTime * verticalInput; // 현재 프레임에서 이동할 거리
+        float amount = currentSpeed * Time.fixedDeltaTime * verticalInput;
         rb.MovePosition(rb.position + transform.forward * amount);
     }
 
     private void BoatRotation()
     {
-        float Horz = Input.GetAxis("Horizontal");
-
         // 회전
-        Rotate(Horz);
+        Rotate(horizontalInput);
     }
 
     public void Rotate(float horizontalInput)
     {
         // 회전
-        float amountRot = rotationSpeed * Time.deltaTime * horizontalInput; // 현재 프레임에서 회전할 각도                                                   
+        float amountRot = rotationSpeed * Time.fixedDeltaTime * horizontalInput;
         rb.MoveRotation(rb.rotation * Quaternion.Euler(Vector3.up * amountRot));
     }
 
@@ -88,16 +118,7 @@ public class BoatMove : MonoBehaviour
 
     }
 
-    public void SetSpeedMultiplier(float multiplier)
-    {
-        currentSpeedMultiplier = multiplier;
-    }
-
-    // 이동 속도 비율 원래대로 복구
-    public void ResetSpeedMultiplier()
-    {
-        currentSpeedMultiplier = 1f;
-    }
+    
 
 
 
