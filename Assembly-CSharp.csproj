@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DD8878A2-B487-F8AB-7A23-B101B3637F39}</ProjectGuid>
+    <ProjectGuid>{D6561420-BDA1-EA90-4130-88A9896E1A49}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -384,6 +384,12 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.27f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.27f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.27f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -859,39 +865,39 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
-      <Project>{FBB954AA-EC0B-BF82-4DA8-4CC1CEECE83D}</Project>
+      <Project>{6DC8BB69-1766-3051-F146-68E456FD537D}</Project>
       <Name>ToonyColorsPro.Demo.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{DCBD06D9-C0B2-C397-B01F-52308E3ED587}</Project>
+      <Project>{D96FD767-99CA-BCA0-D14C-EE68041F2366}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="CFXREditor.csproj">
-      <Project>{505A405D-7D1A-9D12-BE1D-6ADA960B990F}</Project>
+      <Project>{B7CEEF47-F1DF-1EB0-553E-FD8867E959F7}</Project>
       <Name>CFXREditor</Name>
     </ProjectReference>
     <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{0F1D458F-C299-DFAF-C6AC-B4D109D32F05}</Project>
+      <Project>{9DAC1D01-54DC-A8AE-C1FE-FED84EB69866}</Project>
       <Name>KinoBloom.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{7DAA2738-2711-CB82-396E-66CDA74955DE}</Project>
+      <Project>{E3D7A52C-2F95-77A3-90DA-25454C5EF896}</Project>
       <Name>CFXRDemo</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{B1DBA1F6-946D-1DA6-1517-554B64BF5D34}</Project>
+      <Project>{33E7AEF3-7130-49E3-8063-3CE4882D539B}</Project>
       <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{D0CCDB74-03E8-4D16-4CE2-1F15961DB5DB}</Project>
+      <Project>{685A3889-4C13-7745-EB4E-AEC8EBF6A2BB}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="CFXR.WelcomeScreen.csproj">
-      <Project>{DC8E9946-FA93-48A8-E238-0CFF068BC7A7}</Project>
+      <Project>{0C87664C-6006-FF09-E77F-632C94769EBC}</Project>
       <Name>CFXR.WelcomeScreen</Name>
     </ProjectReference>
     <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{A3EBC663-25F3-8A7E-DC11-ADD4B626D442}</Project>
+      <Project>{C5DAF7ED-3619-3FEB-9D9D-E59788B8480F}</Project>
       <Name>CFXRRuntime</Name>
     </ProjectReference>
   </ItemGroup>
